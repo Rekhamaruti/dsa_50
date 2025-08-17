@@ -7,11 +7,12 @@ def monotonic_array(array):
   if first > last:
     #monotonic decreasing
     for i in range(n-1):
-      if array[i]<=array[i+1]:return False
+      if array[i]<array[i+1]:return False
   elif first == last:
     for i in range(n-1):
       if array[i]!=array[i+1]:return False
   else:
     for i in range(n-1):
+      if array[i]>array[i+1]:return False
       return False
   return True
